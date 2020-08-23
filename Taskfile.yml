@@ -1,0 +1,12 @@
+version: '3'
+
+output: prefixed
+
+tasks:
+  default:
+    deps:
+      - task: run-api
+
+  run-api:
+    cmds:
+      - set -a && source .env && go run .
